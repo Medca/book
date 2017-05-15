@@ -1,0 +1,132 @@
+@import "base";
+header{
+  .menu{
+    display: inline-block;
+    width: 50*@rem;
+    height: 100%;
+    background: url("../images/menu.png") no-repeat center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    transition: all .25s linear;
+    &.active{
+      background: url("../images/menu-active.png") no-repeat center center;
+    }
+  }
+
+}
+.tab{
+  position: static;
+  border-width: 1px;
+  background: @titleColor;
+  transition: all 5s linear!important ;
+  ul{
+
+  }
+}
+.userInfo{
+  width: 100%;
+  height: 88*@rem;
+  background: url("../images/user-bg.png") no-repeat center center;
+  background-size: 100%;
+  margin-top: 0;
+  position: relative;
+  .mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+  }
+  .userIcon{
+    width: 68*@rem;
+    height: 68*@rem;
+    background: url("../images/userIcon.png") no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 20*@rem;
+  }
+  .userName{
+    position: absolute;
+    bottom: 10*@rem;
+    left: 108*@rem;
+    color: #fff;
+    font-size: 38px;
+    font-weight: bolder;
+  }
+  .login{
+    width: 102*@rem;
+    height: 32*@rem;
+    line-height: 32*@rem;
+    border: 3px solid #fff;
+    border-radius: 10*@rem;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+.collect{
+  height: 50*@rem;
+  margin-top: 0;
+  padding: 10*@rem;
+  border-bottom: 1px solid @borderColor;
+  .seller,.goods{
+    display: inline-block;
+    width: 95*@rem;
+    height: 30*@rem;
+    line-height:30*@rem;
+    text-align: center;
+  }
+  i{
+    float: right;
+    width: 2px;
+    height: 15*@rem;
+    margin-top: 7.5*@rem;
+    background: #444;
+  }
+}
+.otherInfo{
+  width: 100%;
+  ul{
+    width: 100%;
+    border-top: 1px solid @borderColor;
+    li{
+      width: 100%;
+      height: 40*@rem;
+      line-height: 40*@rem;
+      background: url("../images/leftArr.png") no-repeat 98% center;
+      background-size: 5%;
+      a{
+        width: 100%;
+        height: 100%;
+        font-size: 32px;
+        padding-left: 40*@rem;
+        border-bottom: 1px solid @borderColor;
+        position: relative;
+        i{
+          width: 40*@rem;
+          height: 40*@rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          &.order{
+            background: url("../images/order.png") no-repeat center center;
+            background-size: 50%;
+          }
+          &.addr{
+            background: url("../images/addr.png") no-repeat center center;
+            background-size: 45%;
+          }
+          &.link{
+            background: url("../images/tel.png") no-repeat center center;
+            background-size: 40%;
+          }
+        }
+      }
+    }
+  }
+}

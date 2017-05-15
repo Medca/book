@@ -1,0 +1,53 @@
+@import "base";
+body{
+  background: @bgColor;
+}
+section {
+  .product {
+    width: 100%;
+    li {
+      width: 100%;
+      height: 100*@rem;
+      padding: 10*@rem;
+      border-bottom: 1px solid @borderColor;
+      position: relative;
+      background: url("../images/rightarrow.png") no-repeat 98% center;
+      background-size: 13*@rem 20*@rem;
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 80*@rem;
+          height: 80*@rem;
+          float: left;
+        }
+        .info {
+          width: 230*@rem;
+          padding: 0 10*@rem;
+          p {
+            line-height: 20*@rem;
+            b {
+              display: inline-block;
+              width: 12*@rem;
+              height: 12*@rem;
+              &.star {
+                background: url("../images/star.png") no-repeat center center;
+              }
+              &.star-half {
+                background: url("../images/star-half.png") no-repeat center center;
+              }
+              &.stared {
+                background: url("../images/stared.png") no-repeat center center;
+              }
+            }
+            .conment {
+              font-style: normal;
+              color: #646464;
+            }
+          }
+        }
+      }
+    }
+  }
+}

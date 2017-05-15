@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>biubiu书城</title>
+
+    <link rel="stylesheet" href="../lib/Larea/css//LArea.css">
+    <link rel="stylesheet" href="../style/addAddress.css">
+</head>
+<body>
+    <!--顶部通栏开始-->
+    <header class="header">
+        <a href="javascript:history.back();" class="back"></a>
+        <h3>新增收货地址</h3>
+    </header>
+    <!--顶部通栏结束-->
+    <!--地址列表开始-->
+    <section>
+        <ul class="addressInfo">
+            <li>
+                <span>收货人：</span><input type="text" class="receiver">
+            </li>
+            <li>
+                <span>手&nbsp;&nbsp;&nbsp;&nbsp;机：</span><input type="text" class="phone">
+            </li>
+            <li class="content-block">
+                <span>地&nbsp;&nbsp;&nbsp;&nbsp;区：</span><input id="city" type="text" readonly="" placeholder="城市选择特效"  value="请选择"/>
+                <input id="value1" type="hidden" value="20,234,504"/>
+            </li>
+            <li>
+                <span>地&nbsp;&nbsp;&nbsp;&nbsp;址：</span><input calss="address" type="text" maxlength="30">
+            </li>
+            <li class="isDefault">
+                <span>设置为默认地址</span>
+                <i class="select"></i>
+            </li>
+        </ul>
+        <div class="add">保存地址</div>
+    </section>
+    <!--地址列表结束-->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../lib/layer/layer.js"></script>
+    <script src="../lib/Larea/js/LAreaData1.js"></script>
+    <script src="../lib/Larea/js/LAreaData2.js"></script>
+    <script src="../lib/Larea/js/LArea.js"></script>
+    <script src="../js/addAddress.js"></script>
+</body>
+</html>

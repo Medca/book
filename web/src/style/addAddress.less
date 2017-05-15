@@ -1,0 +1,54 @@
+@import "base";
+
+section{
+  background: #eee;
+  .addressInfo{
+    margin-top: 5*@rem;
+    li{
+      height: 40*@rem;
+      line-height: 40*@rem;
+      padding: 0 10*@rem;
+      background: #fff;
+      border-bottom: 1px solid @borderColor;
+      position: relative;
+      input{
+        width: 80%;
+        font-size: 30px;
+        padding: 0 10*@rem;
+        &#city{
+          text-align: right;
+          font-size: 24px;
+          color: #c0c0c0;
+          background: url("../images/rightarrow.png") no-repeat right center;
+          background-size: 2%;
+        }
+      }
+      .select{
+        width: 20*@rem;
+        height: 20*@rem;
+        border-radius: 50%;
+        border: 1px solid @borderColor;
+        position: absolute;
+        right: 20*@rem;
+        top: 50%;
+        transform: translateY(-50%);
+        &.selected{
+          background: url("../images/select.png") no-repeat  center ;
+          background-size: 90%;
+          border: none;
+        }
+      }
+    }
+  }
+  .add{
+    width: 80%;
+    height: 40*@rem;
+    line-height: 40*@rem;
+    margin: 50*@rem auto;
+    text-align: center;
+    color: #fff;
+    background: #FF4F45;
+    border-radius: 5*@rem;
+  }
+}
+

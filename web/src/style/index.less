@@ -1,0 +1,148 @@
+@import "base";
+body{
+  padding-bottom: 50*@rem;
+}
+
+/*轮播图*/
+.swiper-container{
+  width: 100%;
+  height: 150*@rem;
+  a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-pagination-bullet{
+    width: 7*@rem;
+    height: 7*@rem;
+    margin: 0 5*@rem !important;
+  }
+}
+/*分类导航*/
+nav{
+  background: @bgColor;
+  ul{
+    width: 95%;
+    margin: 5*@rem auto;
+    overflow: hidden;
+    li{
+      float: left;
+      width: 25%;
+      a{
+        width: 100%;
+        img{
+          width: 75*@rem;
+          height: 75*@rem;
+          margin: 5*@rem;
+        }
+      }
+    }
+  }
+}
+/*新闻*/
+.news{
+  padding:  0 10*@rem;
+  position: relative;
+  overflow: hidden;
+  img{
+    width: 100*@rem;
+    height: 50*@rem;
+    vertical-align: middle;
+  }
+  ul{
+    width: 100%;
+    padding-left: 120*@rem;
+    position: absolute;
+    top: 0;
+    transition: all 1s linear;
+    li{
+      width: 100%;
+      height: 50*@rem;
+      line-height: 50*@rem;
+      b{
+        padding: 1*@rem 2*@rem;
+        color: orangered;
+        border: 1px solid orangered;
+        border-radius: 2*@rem;
+        font-size: 18px;
+      }
+      span{
+        margin-left: 7*@rem;
+      }
+    }
+  }
+}
+/*倒计时*/
+.countDown{
+  .title{
+    height: 36*@rem;
+    line-height: 36*@rem;
+    vertical-align: middle;
+    text-align: center;
+    b{
+      color: #000;
+      margin-right: 5*@rem;
+    }
+    .time-border{
+      display: inline-block;
+      width: 20*@rem;
+      height: 20*@rem;
+      line-height: 20*@rem;
+      border-radius: 4*@rem;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+/*推荐模块*/
+.recommend{
+  text-align: center;
+  position: relative;
+  .title{
+    h3{
+      height: 52*@rem;
+      line-height: 52*@rem;
+      color: #D5C19D;
+      font-size: 28px;
+    }
+    i{
+      display: inline-block;
+      width: 100*@rem;
+      height: 2*@rem;
+      position: absolute;
+      top: 25*@rem;
+      &:first-child{
+        background: linear-gradient(to right, #fff, #F0C97C);
+        left: 0;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 6*@rem;
+          height: 6*@rem;
+          border-radius: 50%;
+          border: 1px solid orangered;
+          right: -6*@rem;
+          top: -2*@rem;
+        }
+      }
+      &:last-child{
+        background: linear-gradient(to right, #F0C97C, #fff);
+        right: 0;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 6*@rem;
+          height: 6*@rem;
+          border-radius: 50%;
+          border: 1px solid orangered;
+          left: -6*@rem;
+          top: -2*@rem;
+        }
+      }
+    }
+  }
+}

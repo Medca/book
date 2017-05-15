@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>biubiu书城</title>
+
+    <link rel="stylesheet" href="../style/my.css">
+</head>
+<body>
+    <!--顶部通栏开始-->
+    <header class="header">
+        <a href="javascript:history.go(-1);" class="back"></a>
+        <h3>个人中心</h3>
+        <i class="menu"></i>
+    </header>
+    <!--顶部通栏结束-->
+    <!--通栏开始-->
+    <div class="tab clearfix hide">
+        <ul class=clearfix>
+            <li><a href="../index.html"><img src="../images/home.png" alt=""></a></li>
+            <li><a href="./classify.html"><img src="../images/sort.png" alt=""></a></li>
+            <li><a href="./car.html"><img src="../images/car.png" alt=""></a></li>
+            <li><a href="./traces.html"><img src="../images/foot.png" alt=""></a></li>
+            <li><a href="./my.html"><img src="../images/my.png" alt=""></a></li>
+        </ul>
+    </div>
+    <!--通栏结束-->
+    <!--个人信息开始-->
+    <section class="userInfo">
+        <div class="mask"></div>
+        <div class="userIcon"></div>
+        <span class="userName hide">她们都叫我浈浈</span>
+        <a href="./login.html" class="login">登录 / 注册</a>
+    </section>
+    <!--个人信息结束-->
+    <!--收藏开始-->
+    <section class="collect">
+        <a class="seller f_right" href="./collection.html?class=seller">关注的店铺</a>
+        <i></i>
+        <a class="goods f_right"  href="./collection.html?class=goods">收藏的商品</a>
+    </section>
+    <!--收藏结束-->
+    <!---->
+    <section class="otherInfo">
+        <ul>
+            <li>
+                <a href="orderCenter.html">
+                    <i class="order"></i>
+                    <span>我的订单</span>
+                </a>
+            </li>
+            <li>
+                <a href="address.html">
+                    <i class="addr"></i>
+                    <span>收货地址</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel: 0596-8333444">
+                    <i class="link"></i>
+                    <span>联系客服</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/swiper/swiper-3.4.0.jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>biubiu书城</title>
+
+    <link rel="stylesheet" href="../style/orderDetail.css">
+</head>
+<body>
+    <!--顶部通栏开始-->
+    <header class="header">
+        <a href="javascript:history.back();" class="back"></a>
+        <h3>订单详情</h3>
+        <a class="btn" id="cancel">取消</a>
+    </header>
+    <!--顶部通栏结束-->
+    <!--订单详情开始-->
+    <section>
+        <div class="product">
+            <div class="title clearfix">
+                <div>
+                    <span>订单状态：</span>
+                    <span class="status warm">已完成</span>
+                </div>
+                <div>
+                    <span>交易时间：</span>
+                    <span class="date">2017-05-10</span>
+                    <span class="time">00:00</span>
+
+                </div>
+                <div class="status">
+                    <span>订单号码：</span>
+                    <span class="orderId">748390589403859038</span>
+                </div>
+                <i></i>
+            </div>
+            <div class="addressList">
+                <p class="userInfo">
+                    <span>收货人：</span>
+                    <span class="userName">王坤浈</span>
+                </p>
+                <p>
+                    <span>手机号：</span>
+                    <span class="phone">15754631484</span>
+                </p>
+                <p class="address">
+                    <span>地&nbsp;&nbsp;&nbsp;址：</span>
+                    <span>上海市嘉定区鹤望路234弄</span>
+                </p>
+                <i></i>
+            </div>
+            <ul class="goods">
+                <li class="seller">
+                    <i class="select sellerSelect"></i>
+                    <i class="shop"></i>
+                    <h3>当当网</h3>
+                </li>
+                <li>
+                    <img src="../images/good.jpg" alt="">
+                    <div class="info">
+                        <p class="name">莎士比亚说他论文不知道什么时候能写完...</p>
+                        <p class="price"><span class="warm">￥27.80</span><i class="number f_right">x 1</i></p>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/good.jpg" alt="">
+                    <div class="info">
+                        <p class="name">莎士比亚说他论文不知道什么时候能写完...</p>
+                        <p class="price"><span class="warm">￥27.80</span><i class="number f_right">x 1</i></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="sellerTotal">
+                <span class="f_right">总计：<b>￥</b><i class="smallTotal">0.00</i></span>
+                <span class="toPay f_right hide">立即支付</span>
+            </div>
+        </div>
+    </section>
+    <!--订单详情结束-->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+</html>

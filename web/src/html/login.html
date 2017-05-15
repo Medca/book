@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>biubiu书城</title>
+
+    <link rel="stylesheet" href="../lib/layer/need/layer.css">
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+    <!--顶部通栏开始-->
+    <header class="header">
+        <a href="javascript:history.back();" class="back"></a>
+        <h3>登 录</h3>
+    </header>
+    <!--顶部通栏结束-->
+    <!--表单验证开始-->
+    <form action="#">
+        <div class="userName">
+            <span>账号</span><input type="text" placeholder="请输入手机号" id="userName" autocomplete="off"><i class="hide"></i>
+        </div>
+        <div class="passWord">
+            <span>密码</span><input type="password" id="passWord"  autocomplete="off">
+        </div>
+        <input type="button" value="登 录" class="submit" id="login">
+    </form>
+    <!--表达验证结束-->
+    <!--其他链接开始-->
+    <div class="link">
+        <a href="#" class="f_left">忘记密码？</a>
+        <a href="./regist.html" class="f_right">立即注册></a>
+    </div>
+    <!--其他链接结束-->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../lib/layer/layer.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

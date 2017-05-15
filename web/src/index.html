@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./lib/flexible/flexible.js"></script>
+    <title>biubiu书城</title>
+
+    <link rel="stylesheet" href="./lib/swiper/swiper-3.4.0.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <!-- 顶部搜索框开始-->
+    <header>
+         <div class="top">
+             <a href="javascript:" class="back hide"></a>
+             <input type="text" class="search" placeholder="你喜欢什么书呢？" id="write">
+             <input type="button" class="submit hide" value="搜索">
+         </div>
+    </header>
+    <!-- 顶部搜索框结束-->
+    <!--轮播图开始-->
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a>
+                    <img src="./images/banner.jpg"/>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a>
+                    <img src="./images/banner.jpg"/>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a>
+                    <img src="./images/banner.jpg"/>
+                </a>
+            </div>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--轮播图结束-->
+    <!--导航开始-->
+    <nav class="clearfix">
+        <ul class="clearfix">
+            <li>
+                <a classId="0">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="1">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="2">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="3">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="4">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="5">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="6">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a classId="7">
+                    <img src="./images/sort.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--导航结束-->
+    <!--新闻开始-->
+    <section class="news clearfix">
+        <img src="./images/news.jpg" alt="">
+        <ul class="product-list" id="newsList">
+            <li>
+                    <b>hot</b><span>好书特价，满200-100</span>
+            </li>
+            <li>
+                <b>hot</b><span>好书特价，满200-100</span>
+            </li>
+            <li>
+                <b>hot</b><span>好书特价，满200-100</span>
+            </li>
+            <li>
+                <b>hot</b><span>好书特价，满200-100</span>
+            </li>
+        </ul>
+    </section>
+    <!--新闻结束-->
+    <!--秒杀开始-->
+    <section class="countDown">
+        <div class="title">
+            <b>图书馆秒杀</b>
+            <span id="countDown"></span>
+        </div>
+        <div class="content">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚说他可能有一点无聊</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--秒杀结束-->
+    <!--推荐模块开始-->
+    <section class="recommend clearfix">
+        <div class="title">
+            <i></i>
+            <h3>新书上架</h3>
+            <i></i>
+        </div>
+        <div class="content">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚说他可能有一点无聊</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="recommend clearfix">
+        <div class="title">
+            <i></i>
+            <h3>热门推荐</h3>
+            <i></i>
+        </div>
+        <div class="content">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚说他可能有一点无聊</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="./images/book.jpg" alt="">
+                        <p class="bookname">莎士比亚</p>
+                        <p class="warm">￥29.00</p>
+                        <del>￥99.00</del>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--推荐模块结束-->
+    <!--返回顶部开始-->
+    <div class="goTop">
+        <a href="#header"></a>
+    </div>
+    <!--返回顶部结束-->
+    <!--通栏开始-->
+    <div class="tab clearfix">
+        <ul class=clearfix>
+            <li><a href="./index.html"><img src="./images/home.png" alt=""></a></li>
+            <li><a href="./html/classify.html"><img src="./images/sort.png" alt=""></a></li>
+            <li><a href="./html/car.html"><img src="./images/car.png" alt=""></a></li>
+            <li><a href="./html/traces.html"><img src="./images/foot.png" alt=""></a></li>
+            <li><a href="./html/my.html"><img src="./images/my.png" alt=""></a></li>
+        </ul>
+    </div>
+    <!--通栏结束-->
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/swiper/swiper-3.4.0.jquery.min.js"></script>
+    <script src="./lib/countDown/countDown.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>

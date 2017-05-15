@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/flexible/flexible.js"></script>
+    <title>通用电商平台</title>
+
+    <link rel="stylesheet" href="../lib/swiper/swiper-3.4.0.min.css">
+    <link rel="stylesheet" href="../style/goodDetail.css">
+</head>
+<body>
+    <!--顶部通栏开始-->
+    <header class="header">
+        <a href="javascript:history.back();" class="back"></a>
+        <h3 class="goodTab"><span class="warm" flag="good">商品</span><span flag="detail">详情</span></h3>
+    </header>
+    <!--顶部通栏结束-->
+    <!--中间介绍部分开始-->
+    <main>
+        <!--商品开始-->
+        <div class="good">
+            <!--商品展示图片轮播开始-->
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" >
+                            <img src="../images/goodDetail.jpg"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" >
+                            <img src="../images/goodDetail.jpg"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" >
+                            <img src="../images/goodDetail.jpg"/>
+                        </a>
+                    </div>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--商品展示图片轮播结束-->
+            <!--商品信息展示开始-->
+            <div class="goodInfo">
+                <p class="bookName">Vue.js从精通到入门</p>
+                <p class="bookInfo">这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书</p>
+                <p class="price">
+                    <span class="actualPrice warm">￥22.00</span>
+                    <span>定价:</span>
+                    <del>￥39.00</del>
+                </p>
+            </div>
+            <!--商品信息展示结束-->
+            <div class="amount">
+                <span>数量：</span>
+                <i class="minus">-</i><i class="number">1</i><i class="plus">+</i>
+            </div>
+        </div>
+        <!--商品结束-->
+        <!--详情开始-->
+        <ul class="detail hide">
+            <li>
+                <span>书名：</span>
+                <span>亦舒说</span>
+            </li>
+            <li>
+                <span>作者：</span>
+                <span>SweetAnn</span>
+            </li>
+            <li>
+                <span>作者：</span>
+                <span>SweetAnn</span>
+            </li>
+            <li>
+                <span>类型：</span>
+                <span>言情小说</span>
+            </li>
+            <li>
+                <span>库存：</span>
+                <span>55</span>
+            </li>
+            <li>
+                <p>梗概：</p>
+                <p>本书从最早期Netscape浏览器中的JavaScript开始讲起，直到当前它对XML和Web服务的具体支持，内容主要涉及JavaScript的语言特点、JavaScript与浏览器的交互、更高级的JavaScript技巧，以及与在Web应用程序中部署JavaScript解决方案有关的问题，如错误处理、调试、安全性、优化/混淆化、XML和Web服务，最后介绍应用所有这些知识来创建动态用户界面。 本书适合有一定编程经验的开发人员阅读，也可作为高校相关专业课程的教材。</p>
+            </li>
+        </ul>
+        <!--详情结束-->
+    </main>
+    <!--中间介绍结束-->
+    <!--底部购物车开始-->
+    <div class="tab clearfix">
+        <ul class=clearfix>
+            <li><i class="collect"></i></li>
+            <li><a href="./car.html"><i class="car"></i></a></li>
+            <li>立即购买</li>
+            <li>加入购物车</li>
+        </ul>
+    </div>
+    <!--底部购物车结束-->
+
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/swiper/swiper-3.4.0.jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/goodDetail.js"></script>
+</body>
+</html>
