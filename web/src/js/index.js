@@ -25,17 +25,7 @@ $(function () {
         autoplayDisableOnInteraction: false, //滑动之后可继续自动轮播
     });
 
-    //快讯滚动播出
-    var liHeight = $("#newsList li:first-child").height(),
-        liNum = $("#newsList li").length;
-    var i = 0;
-    setInterval(function () {
-        if(i == liNum){
-            i = 0;
-        }
-        $("#newsList").css({top: -i*liHeight});
-        i++;
-    },3000);
+    
 
     //倒计时
     $("#countDown").countDown(1000);
@@ -50,10 +40,15 @@ $(function () {
         window.location.href = "./html/goodDetail.html";
     })
 
-    queryMessage()
+    queryBanner()
+
+    //queryClassify()
+
+    querynewsList()
 })
 
-function queryMessage(){
+//轮播图
+function queryBanner(){
    /* $.ajax({
         url:"http://120.76.114.85:8888/wkz_book/bannerinfo/queryBannerinfo.do",
         type:"GET",
@@ -75,9 +70,83 @@ function queryMessage(){
         url: basepath + "/bannerinfo/queryBannerinfo.do",
         type: "GET"
     }, params)
-        .then( (value) => {
-            console.log(value);
+        .then( (result) => {
+            if(result.status === 0){
+                var html = '';
+                for(let i of result.data.list){
+                    html += `
+                        <div class="swiper-slide">
+                            <a>
+                                <img src="${i.bannerPic}" alt="${i.bannerName}"/>
+                            </a>
+                        </div>
+                    `
+                }
+                $('#swiper-wrapper').append(html)
+            }
     }).catch((error) => {
             console.error("报错了:"+error);
     });
  }
+
+//分类
+function queryClassify(){
+    let params = ""
+    myAjax.request({
+        url: basepath + "/classification/queryClassification.do",
+        type: "GET"
+    }, params)
+        .then( (result) => {
+            if(result.status === 0){
+                var html = '';
+                for(let i=0;i<result.data.list.length;i++){
+                    html += `
+                        <li>
+                            <a classId="${i}">
+                                <img src="${result.data.list[i].picUrl}" alt="${result.data.list[i].classificationName}">
+                            </a>
+                        </li>
+                    `
+                }
+                $('#classify').append(html)
+            }
+    }).catch((error) => {
+            console.error("报错了:"+error);
+    });
+}
+ 
+ //新闻
+ function querynewsList(){
+    let params = ""
+    myAjax.request({
+        url: basepath + "/newsinfo/queryNewsinfo.do",
+        type: "GET"
+    }, params)
+        .then( (result) => {
+            if(result.status === 0){
+                var html = '';
+                result.data.list.forEach((val, index) => {
+                    html += `
+                        <li>
+                                <b>${val.subTitle}</b><span>${val.title}</span>
+                        </li>
+                    `
+                })
+                $('#newsList').append(html)
+            }
+    }).then(() => {
+        //快讯滚动播出
+        var liHeight = $("#newsList li:first-child").height(),
+            liNum = $("#newsList li").length;
+        var i = 0;
+        setInterval(function () { 
+            if(i == liNum){
+                i = 0;
+            }
+            $("#newsList").css({top: -i*liHeight});
+            i++;
+        },3000);
+    }).catch((error) => {
+            console.error("报错了:"+error);
+    });
+}
