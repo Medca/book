@@ -45,6 +45,8 @@ $(function () {
     //queryClassify()
 
     querynewsList()
+
+    querycountDownList()
 })
 
 //轮播图
@@ -146,6 +148,62 @@ function queryClassify(){
             $("#newsList").css({top: -i*liHeight});
             i++;
         },3000);
+    }).catch((error) => {
+            console.error("报错了:"+error);
+    });
+}
+
+//秒杀
+function querycountDownList(){
+    let params = {
+        "businessCode" : 'admin'
+    }
+    myAjax.request({
+        url: basepath + "/activityrelation/queryActivityrelation.do",
+        type: "GET"
+    }, params)
+    .then( (result) => {
+        if(result.status === 0){
+            var html = '';
+            var res = result.data.list[0];
+            console.log(res)
+            html = `
+                <li class="swiper-slide">
+                    <a>
+                        <img src="${res.picUrl}" alt="">
+                        <p class="bookname">${res.bookName}</p>
+                        <p class="warm">${res.subprice}</p>
+                        <del>${res.pirce}</del>
+                    </a>
+                </li>
+            `
+            $('#countDownList').append(html)
+        }
+    }).catch((error) => {
+            console.error("报错了:"+error);
+    });
+}
+
+
+//推荐
+ function queryActivityrelation(){
+    let params = {
+        "businessCode" : 'admin'
+    }
+    myAjax.request({
+        url: basepath + "/activityrelation/queryActivityrelation.do",
+        type: "GET"
+    }, params)
+        .then( (result) => {
+            if(result.status === 0){
+                var html = '';
+               $.each((index,val) => {
+                   html += `
+
+                   `
+               })
+                $('#newsList').append(html)
+            }
     }).catch((error) => {
             console.error("报错了:"+error);
     });

@@ -1,5 +1,5 @@
-// var basepath = 'http://localhost/wkz_book'
-var basepath = 'http://120.76.114.85:8888/wkz_book'
+var basepath = 'http://localhost/wkz_book'
+//var basepath = 'http://120.76.114.85:8888/wkz_book'
 //自己封装 的ajax
 var myAjax = {
     request: function(options,params){
