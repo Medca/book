@@ -42,7 +42,7 @@ $(function () {
 
     queryBanner()
 
-    //queryClassify()
+    queryClassify()
 
     querynewsList()
 

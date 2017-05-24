@@ -1,5 +1,5 @@
 $(function () {
-
+    var goodsCode = ""+ddsc.getUrlParam("goodsCode");
     //点击tab栏切换
     $(".goodTab span").on("click", function () {
         $(this).addClass("warm").siblings().removeClass("warm");
