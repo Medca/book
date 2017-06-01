@@ -73,10 +73,11 @@ function queryClassify(){
 function queryBook(classificationCode){
     let params = {
         classificationCode,
-        //"isMain": 1
+        isMain: 1,
+        pageNum: 20
     }
     myAjax.request({
-        url: basepath + "/bookinfo/queryBookinfo.do",
+        url: basepath + "/bookinfo/queryBookinfoMobile.do",
         type: "GET"
     }, params)
         .then( (result) => {

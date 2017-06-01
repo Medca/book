@@ -1,5 +1,5 @@
-//var basepath = 'http://localhost/wkz_book'
-var basepath = 'http://120.76.114.85:8888/wkz_book'
+ var basepath = 'http://localhost/wkz_book'
+//var basepath = 'http://120.76.114.85:8888/wkz_book'
 //自己封装 的ajax
 var myAjax = {
     request: function(options,params){
@@ -11,6 +11,8 @@ var myAjax = {
                 model:"",
                 method:"",
                 params:"",
+                dataType: '',
+                'contentType': '',
                 //before:function(){loading("请稍后数据执行中...");},
                 success:function(){},
                 error:function(error){reject("错误代码："+error.status+","+"服务器异常")},
@@ -22,8 +24,10 @@ var myAjax = {
         $.ajax({
             type:opts.type,
             url:opts.url,
+            dataType: opts.dataType,
             beforeSend:opts.before,
             error:opts.error,
+            'contentType': opts.contentType,
             data:params,
             success:function(data){
                 resolve(data)

@@ -136,6 +136,7 @@ function login(tel, pwd){
                 callback: function(){
                     if(result.status == 0){//console.log(1);
                         ddsc.localStorage.set('userinfo', result.data)
+                        window.history.go(-1);
                     }
                 }
             }

@@ -30,7 +30,7 @@
     <section class="userInfo">
         <div class="mask"></div>
         <div class="userIcon"></div>
-        <span class="userName hide">她们都叫我浈浈</span>
+        <span class="userName "><!--她们都叫我浈浈--></span>
         <a href="./login.html" class="login">登录 / 注册</a>
     </section>
     <!--个人信息结束-->
@@ -69,5 +69,12 @@
     <script src="../lib/swiper/swiper-3.4.0.jquery.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        var userinfo = ddsc.localStorage.get("userinfo");
+        if(userinfo && (userinfo.userCode!=null)){
+            $('.login').hide()
+            $('.userName').removeClass(".hide").text(userinfo.userName);
+        }
+    </script>
 </body>
 </html>

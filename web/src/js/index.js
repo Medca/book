@@ -35,10 +35,10 @@ $(function () {
         window.location.href = "./html/classify.html?classId=" + $(this).attr("classId");
     })
 
-    //点击商品进入商品详情
-    $(".content a").on("click", function () {
-        window.location.href = "./html/goodDetail.html";
-    })
+    // //点击商品进入商品详情
+    // $(".content a").on("click", function () {
+    //     window.location.href = "./html/goodDetail.html";
+    // })
 
     queryBanner()
 
@@ -47,6 +47,8 @@ $(function () {
     querynewsList()
 
     querycountDownList()
+
+    queryActivityrelation()
 })
 
 //轮播图
@@ -156,29 +158,37 @@ function queryClassify(){
 //秒杀
 function querycountDownList(){
     let params = {
-        "businessCode" : 'admin'
+        "businessCode" : 'admin',
+        activityCode: 'c20170516212051191'
     }
     myAjax.request({
-        url: basepath + "/activityrelation/queryActivityrelation.do",
+        url: basepath + "/activityinfo/queryActivityBooks.do",
         type: "GET"
     }, params)
     .then( (result) => {
         if(result.status === 0){
             var html = '';
             var res = result.data.list[0];
-            console.log(res)
-            html = `
-                <li class="swiper-slide">
-                    <a>
-                        <img src="${res.picUrl}" alt="">
-                        <p class="bookname">${res.bookName}</p>
-                        <p class="warm">${res.subprice}</p>
-                        <del>${res.pirce}</del>
-                    </a>
-                </li>
-            `
+            for(let i of res.getGoodsInfos){
+                html += `
+                    <li class="swiper-slide" activityCode='${res.activityCode}' goodsCode="${i.goodsCode}">
+                        <a>
+                            <img src="${i.picUrl}" alt="">
+                            <p class="bookname">${i.bookName}</p>
+                            <p class="warm">￥${i.subprice}</p>
+                            <del>￥${i.pirce}</del>
+                        </a>
+                    </li>
+                `
+            }
             $('#countDownList').append(html)
         }
+    }).then(() => {
+        $("#countDownList li").on('click', function(){
+            let goodsCode= $(this).attr('goodsCode'),
+                activityCode = $(this).attr('activityCode');
+            window.location.href = "./html/goodDetail.html?goodsCode="+goodsCode+"&activityCode="+activityCode;
+        })
     }).catch((error) => {
             console.error("报错了:"+error);
     });
@@ -191,19 +201,51 @@ function querycountDownList(){
         "businessCode" : 'admin'
     }
     myAjax.request({
-        url: basepath + "/activityrelation/queryActivityrelation.do",
+        url: basepath + "/activityinfo/queryActivityBooks.do",
         type: "GET"
     }, params)
         .then( (result) => {
             if(result.status === 0){
                 var html = '';
-               $.each((index,val) => {
-                   html += `
-
-                   `
+                let newArr = result.data.list.filter((val) => {
+                    if(val.activityCode != 'c20170516212051191')
+                    return val
+                })
+               $.each(newArr, (index,val) => {
+                    html = `
+                        <div class="title">
+                            <i></i>
+                            <h3>${val.title}</h3>
+                            <i></i>
+                        </div>
+                        <div class="content">
+                            <ul class="swiper-wrapper" id="${index}ul">
+                                
+                            </ul>
+                        </div>
+                    `
+                    $('#recommend').append(html)
+                    for(let i of val.getGoodsInfos){
+                        h = `
+                            <li class="swiper-slide" goodsCode=${i.goodsCode} activityCode=${val.activityCode}>
+                                <a>
+                                    <img src="${i.picUrl}" alt="">
+                                    <p class="bookname">${i.bookName}</p>
+                                    <p class="warm">￥${i.subprice}</p>
+                                    <del>￥${i.pirce}</del>
+                                </a>
+                            </li>
+                        `
+                        $('#'+index+'ul').append(h)
+                    }
                })
-                $('#newsList').append(html)
             }
+    }).then(() => {
+         $("#recommend li").on('click', function(){
+            let goodsCode= $(this).attr('goodsCode'),
+                activityCode = $(this).attr('activityCode');
+            window.location.href = "./html/goodDetail.html?goodsCode="+goodsCode+"&activityCode="+activityCode;
+        })
     }).catch((error) => {
             console.error("报错了:"+error);
     });

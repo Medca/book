@@ -21,8 +21,8 @@
         <div class="good">
             <!--商品展示图片轮播开始-->
             <div class="swiper-container">
-                <ul class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <ul class="swiper-wrapper" id="bookpic">
+                    <!--<div class="swiper-slide">
                         <a href="#" >
                             <img src="../images/goodDetail.jpg"/>
                         </a>
@@ -36,20 +36,20 @@
                         <a href="#" >
                             <img src="../images/goodDetail.jpg"/>
                         </a>
-                    </div>
+                    </div>-->
                 </ul>
                 <div class="swiper-pagination"></div>
             </div>
             <!--商品展示图片轮播结束-->
             <!--商品信息展示开始-->
-            <div class="goodInfo">
-                <p class="bookName">Vue.js从精通到入门</p>
-                <p class="bookInfo">这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书</p>
-                <p class="price">
+            <div class="goodInfo" id="goodInfo">
+                <p class="bookName" id="bookName"><!--Vue.js从精通到入门--></p>
+                <p class="bookInfo" id="bookInfo"><!--这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书这是一本vue的书--></p>
+                <!--<p class="price">
                     <span class="actualPrice warm">￥22.00</span>
                     <span>定价:</span>
                     <del>￥39.00</del>
-                </p>
+                </p>-->
             </div>
             <!--商品信息展示结束-->
             <div class="amount">
@@ -82,7 +82,7 @@
             </li>
             <li>
                 <p>梗概：</p>
-                <p>本书从最早期Netscape浏览器中的JavaScript开始讲起，直到当前它对XML和Web服务的具体支持，内容主要涉及JavaScript的语言特点、JavaScript与浏览器的交互、更高级的JavaScript技巧，以及与在Web应用程序中部署JavaScript解决方案有关的问题，如错误处理、调试、安全性、优化/混淆化、XML和Web服务，最后介绍应用所有这些知识来创建动态用户界面。 本书适合有一定编程经验的开发人员阅读，也可作为高校相关专业课程的教材。</p>
+                <p id="des"><!--本书从最早期Netscape浏览器中的JavaScript开始讲起，直到当前它对XML和Web服务的具体支持，内容主要涉及JavaScript的语言特点、JavaScript与浏览器的交互、更高级的JavaScript技巧，以及与在Web应用程序中部署JavaScript解决方案有关的问题，如错误处理、调试、安全性、优化/混淆化、XML和Web服务，最后介绍应用所有这些知识来创建动态用户界面。 本书适合有一定编程经验的开发人员阅读，也可作为高校相关专业课程的教材。--></p>
             </li>
         </ul>
         <!--详情结束-->
@@ -93,8 +93,8 @@
         <ul class=clearfix>
             <li><i class="collect"></i></li>
             <li><a href="./car.html"><i class="car"></i></a></li>
-            <li>立即购买</li>
-            <li>加入购物车</li>
+            <li id="buy">立即购买</li>
+            <li id="shoppingcar">加入购物车</li>
         </ul>
     </div>
     <!--底部购物车结束-->
@@ -106,6 +106,8 @@
     <script src="../lib/swiper/swiper-3.4.0.jquery.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../lib/layer/layer.js"></script>
+    <script src="../js/util.js"></script>
     <script src="../js/goodDetail.js"></script>
 </body>
 </html>
