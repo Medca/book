@@ -169,49 +169,31 @@ function queryBookList(){
 //添加购物车
 function addshoppingcar(obj){
     
-    $.ajax({
-            type: 'post',
-            url:basepath + "/shoppingcar/addShoppingcar.do",
-            dataType: "json",
-            data:{"num":obj.num,"goodsCode":obj.goodsCode,"price":obj.price,"unitName":obj.unitName,"userCode":obj.userCode},
-            success:function(result){
-               let msg = {
-                    message: result.msg
-                }
-                showToast(msg)
-                if(result.status === 0){
-                    setInterval(() => {
-                        window.location.href = "./car.html";
-                    }, 2000)
-                }
-            }
-        });
-        return
-    // myAjax.request({
-    //     url: basepath + "/shoppingcar/addShoppingcar.do",
-	// 	dataType:"json",
-    // }, {
-    //     "num":obj.num,"goodsCode":obj.goodsCode,"price":obj.price,"unitName":obj.unitName,"userCode":obj.userCode
-    //     }
-    // )    
-    // .then((result)  => {
-    //     let msg = {
-    //         message: result.msg
-    //     }
-    //     showToast(msg)
-    //     if(result.status === 0){
-    //         setInterval(() => {
-    //             window.location.href = "./car.html";
-    //         }, 2000)
-    //     }
-    // })
-    // .catch((error) => {
-    //     /*let layparams = {
-    //         message: "报错了:"+error,
-    //     }
-    //     showToast(layparams)*/
-    //     console.error("报错了:"+error);
-    // });     
+    myAjax.request({
+        url: basepath + "/shoppingcar/addShoppingcar.do",
+		dataType:"json",
+    }, {
+        "num":obj.num,"goodsCode":obj.goodsCode,"price":obj.price,"unitName":obj.unitName,"userCode":obj.userCode
+        }
+    )    
+    .then((result)  => {
+        let msg = {
+            message: result.msg
+        }
+        showToast(msg)
+        if(result.status === 0){
+            setInterval(() => {
+                window.location.href = "./car.html";
+            }, 2000)
+        }
+    })
+    .catch((error) => {
+        /*let layparams = {
+            message: "报错了:"+error,
+        }
+        showToast(layparams)*/
+        console.error("报错了:"+error);
+    });     
 }
 
 //足迹添加
@@ -220,13 +202,7 @@ function addFootprintinfo(userCode, goodsCode){
     if(!goodsCode || !userCode){
         return
     }
-    // $.ajax({
-    //         type: 'post',
-    //         url:basepath + "/footprintinfo/addFootprintinfo.do",
-    //         dataType: "json",
-    //         data:{"goodsCode":goodsCode,"userCode":userCode}
-            
-    //     });
+    
     myAjax.request({
         url: basepath + "/footprintinfo/addFootprintinfo.do",
 		dataType:"json",

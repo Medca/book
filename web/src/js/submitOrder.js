@@ -41,6 +41,10 @@ var goodsinfo = ddsc.localStorage.get("goodsinfo");
 //查询
 function queryOrderinfos(){
     // console.log(goodsinfo)
+    if(!goodsinfo){
+        window.location.href = './car.html'
+        return
+    }
     let html = ``
     html = `
             <li class="seller">
@@ -65,6 +69,7 @@ function addrOrder(){
     var addrCode =  $(".addressList").attr('addrCode')
     var businessCode= $('.businessName').attr('businessCode');
     var goodsCode = $('.info').attr('goodsCode')
+    let msg = {}
     if(!userCode){
         msg = {
             message: "用户不存在"
@@ -92,9 +97,6 @@ function addrOrder(){
         showToast(msg)
         return
     }
-    let msg = {
-
-    }
      var orderInfo = [
             //orderInfo[i]为一个店铺和商品的订单，
             //orderMain为一个店铺的订单，
@@ -116,7 +118,6 @@ function addrOrder(){
         ]
     
     orderInfo = JSON.stringify(orderInfo)
-    console.log(orderInfo)
     myAjax.request({
         url: basepath + "/orderinfo/addOrderMainInfo.do",
 		dataType:"json",

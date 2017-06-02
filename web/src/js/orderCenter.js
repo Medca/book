@@ -11,7 +11,8 @@ $(function () {
 //查询
 function queryOrderinfos(){
     let obj = {
-        userCode
+        userCode,
+        order: 'desc'
     }
      myAjax.request({
         url: basepath + "/orderinfo/queryOrderinfosMobile.do",

@@ -11,8 +11,6 @@ var myAjax = {
                 model:"",
                 method:"",
                 params:"",
-                dataType: '',
-                'contentType': '',
                 //before:function(){loading("请稍后数据执行中...");},
                 success:function(){},
                 error:function(error){reject("错误代码："+error.status+","+"服务器异常")},
